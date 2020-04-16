@@ -32,18 +32,16 @@ int main(int ac, char *ar[], char *envp[])
 			exit(0);
 		}
 		if (_strcmp(buffer, "exit\n") == 0)
-		{	free(buffer);
+		{
+			free(buffer);
 			exit(0);
 		}
 		_split(buffer, av);
 		if ((*buffer != '\n') && av[0])
-
 			_exec(pos, av);
-
 		while (pos < 10)
-		{
 			pos++;
-		}
+
 	} while (1);
 	free(buffer);
 	free(av);
