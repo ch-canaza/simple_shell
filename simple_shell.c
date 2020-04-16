@@ -28,15 +28,19 @@ int main(int ac, char *ar[], char *envp[])
 			if (isatty(STDIN_FILENO))
 				write(STDOUT_FILENO, "\n", 1);
 			free(buffer);
-			exit(EXIT_SUCCESS);
+			exit(0);
 		}
 		if (_strcmp(buffer, "exit\n") == 0)
 		{	free(buffer);
-			exit(EXIT_SUCCESS);
+			exit(0);
 		}
 		_split(buffer, av);
 		if ((*buffer != '\n') && av[0])
+
 			_exec(pos,av);
+
+			_exec(pos, av);
+
 		while (pos < 10)
 		{
 			pos++;
