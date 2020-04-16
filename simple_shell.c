@@ -36,7 +36,7 @@ int main(int ac, char *ar[], char *envp[])
 		}
 		_split(buffer, av);
 		if ((*buffer != '\n') && av[0])
-			_exec(av);
+			_exec(pos,av);
 		while (pos < 10)
 		{
 			pos++;

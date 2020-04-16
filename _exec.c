@@ -9,7 +9,6 @@ int _exec(int  ac, char *av[])
 {
 	(void) ac;
 	size_t pid = 0;
-	int status = 0;
 	unsigned int i = 0;
 	struct stat sb;
 
@@ -35,4 +34,5 @@ int _exec(int  ac, char *av[])
 			}
 		}
 	}
+	return(0);
 }
