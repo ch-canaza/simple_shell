@@ -30,12 +30,12 @@ int main(int ac, char *ar[], char *envp[])
 			free(buffer);
 			exit(0);
 		}
-		if (strcmp(buffer, "exit\n") == 0)
+		if (_strcmp(buffer, "exit\n") == 0)
 		{	free(buffer);
 			exit(0);
 		}
-		if (strcmp(buffer, "env\n") == 0)
-			print_e(envp);
+		/*if (_strcmp(buffer, "env\n") == 0)
+		  print_e(envp);*/
 		_split(buffer, av);
 		if ((*buffer != '\n') && av[0])
 			_exec(av);
