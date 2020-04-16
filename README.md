@@ -15,29 +15,36 @@
 ![alt text]()
 
 > ### Introduction
-Project in which the operation of the printf `(_printf)` is simulated, which receives `string`, `single char`, `integer`, `decimals`, and the character percentage `(%)`
+Project in which the operation of the shell `(_mini_shell)` is simulated, which receives `string` as commands end execute them
+
 ---
->### Write a README
-Write a man for your shell.
-You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository. Format, see Docker
+
+> ### Write a README
+* Write a man for your shell.
+* You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository. Format, see Docker
+
 ---
+
 > ### Betty would be proud
 
-Write a beautiful code that passes the Betty checks
+>Write a beautiful code that passes the Betty checks
 
 ### Simple shell 0.1
 |Write a UNIX command line interpreter.|
 
 |----|your shell should ---|
-Display a prompt and wait for the user to type a command. A command line always ends with a new line.
+
+* Display a prompt and wait for the user to type a command. A command line always ends with a new line.
 The prompt is displayed again each time a command has been executed.
-The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
-The command lines are made only of one word. No arguments will be passed to programs.
-If an executable cannot be found, print an error message and display the prompt again.
-Handle errors.
-You have to handle the “end of file” condition (Ctrl+D)
+* The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
+* The command lines are made only of one word. No arguments will be passed to programs.
+* If an executable cannot be found, print an error message and display the prompt again.
+* Handle errors.
+* You have to handle the “end of file” condition (Ctrl+D)
+
 ---
-> ###7. Simple shell 0.3
+
+### 7. Simple shell 0.3
 
 | simple shell 0.2+ |
 
@@ -62,7 +69,7 @@ Please, remember that these blogs must be written in English to further yo* ur t
 ---
 > ## Contact 💬
 > Andres Miranda
-### | [twitter](https://twitter.com/RICARDO1470) | [linkedin](https://www.linkedin.com/in/AMIRANDA9112/) | [mail](1642@holbertonschool.com) | [github](https://github.com/AMIRANDA9112/README/blob/master/README.md) |
+### | [twitter] | [linkedin](https://www.linkedin.com/in/AMIRANDA9112/) | [mail](1642@holbertonschool.com) | [github](https://github.com/AMIRANDA9112) |
 
 > Christian Nazareno
 ### | [twitter](https://twitter.com/Camilo06134257) | [linkedin](https://www.linkedin.com/in/christian-nazareno-8441b81a1/) | [mail](1464@holbertonschool.com) | [github](https://github.com/ch-canaza)  |
