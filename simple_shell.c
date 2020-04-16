@@ -12,7 +12,8 @@ int main(int ac, char *ar[], char *envp[])
 	(void)envp;
 	(void)ac;
 	(void)ar;
-	char *buffer = NULL, *av[] = {NULL};
+	char *buffer = NULL;
+	char *av[] = {NULL};
 	int pos = 0, g = 0;
 	size_t size = 0;
 
