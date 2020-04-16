@@ -20,7 +20,7 @@ int main(int ac, char *ar[], char *envp[])
 	do {
 		pos = 0;
 		if (isatty(STDIN_FILENO))
-			printf("#cisfun$ ");
+			write(STDOUT_FILENO,"#cisfun$ ",10);
 		g = getline(&buffer, &size, stdin);
 		if (!buffer)
 			free(buffer);
