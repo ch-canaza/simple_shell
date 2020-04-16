@@ -28,11 +28,11 @@ int main(int ac, char *ar[], char *envp[])
 			if (isatty(STDIN_FILENO))
 				write(STDOUT_FILENO, "\n", 1);
 			free(buffer);
-			exit(0);
+			exit(EXIT_SUCCESS);
 		}
 		if (_strcmp(buffer, "exit\n") == 0)
 		{	free(buffer);
-			exit(0);
+			exit(EXIT_SUCCESS);
 		}
 		_split(buffer, av);
 		if ((*buffer != '\n') && av[0])

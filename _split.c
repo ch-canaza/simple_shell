@@ -9,12 +9,12 @@ void _split(char *buffer, char **av)
 	char *token = NULL;
 	int i = 0;
 
-	token = strtok(buffer, "\t\n\a\r ");
+	token = strtok(buffer, "\t\n\a\r");
 	while (token != NULL)
 	{
 		av[i] = token;
 		i++;
-		token = strtok(NULL, " \t\n\r");
+		token = strtok(NULL, "\t\n\a\r");
 	}
 	av[i] = NULL;
 }

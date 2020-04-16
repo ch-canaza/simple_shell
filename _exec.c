@@ -1,25 +1,38 @@
 #include "header.h"
 /**
- *_exec-function that executes commands from stdin
+ * _exec - function thatexecutes commands from stdin
  * @av: array of arguments to execute
+ * @ac: number of arguments
+ * Return: 0
  */
-void _exec(char *av[])
+int _exec(int  ac, char *av[])
 {
+	(void) ac;
 	size_t pid = 0;
 	int status = 0;
+	unsigned int i = 0;
+	struct stat sb;
 
-	pid = fork();
-
-	if (pid == 0)
+	if (av[0])
 	{
-		if (execve(av[0], av, NULL) == -1)
+		if (stat(av[i], &sb) == -1)
 		{
-			perror("./shell");
-			exit(127);
+			perror("stat");
+				return (127);
 		}
-	}
-	else
-	{
-		wait(&status);
+
+		else
+		{
+			pid = fork();
+
+			if (pid == 0)
+			{
+				if (execve(av[0], av, NULL) == -1)
+				{
+					perror("./shell");
+					exit(2);
+				}
+			}
+		}
 	}
 }
