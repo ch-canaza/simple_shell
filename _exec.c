@@ -1,6 +1,6 @@
 #include "header.h"
 /**
- *_exec-function thatexecutes commands from stdin
+ *_exec-function that executes commands from stdin
  * @av: array of arguments to execute
  */
 void _exec(char *av[])
