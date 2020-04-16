@@ -20,7 +20,7 @@ void _split(char *buffer, char **av)
 		i++;
 		token = strtok(NULL, " \t\n\r");
 	}
-	
+
 	av[i] = NULL;
 
 }
