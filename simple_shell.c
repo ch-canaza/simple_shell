@@ -39,8 +39,6 @@ int main(int ac, char *ar[], char *envp[])
 
 			_exec(pos,av);
 
-			_exec(pos, av);
-
 		while (pos < 10)
 		{
 			pos++;
