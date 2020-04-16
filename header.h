@@ -11,7 +11,7 @@
 #include <signal.h>
 #include <stdarg.h>
 void _split(char *buffer, char **av);
-void _exec(char *av[]);
+int _exec(int  ac, char *av[]);
 int _strcmp(char *s1, char *s2);
 int main(int ac, char **ar, char *envp[]);
 #endif
