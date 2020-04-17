@@ -8,12 +8,11 @@
  */
 int _exec(int  ac, char *av[])
 {
+	int pid, status;
+	unsigned int i;
 	(void) ac;
-	int pid;
-	int status = 0;
-	unsigned int i = 0;
-	struct stat sb;
-
+	i = 0;
+	status = 0;
 	pid = 0;
 	if (av[0])
 	{
