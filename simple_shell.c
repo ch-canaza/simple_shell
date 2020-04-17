@@ -8,7 +8,8 @@
  */
 int main(int ac, char *ar[], char *envp[])
 {
-	char *buffer = NULL, *av[10];
+	char *buffer = NULL;
+	char  *av[] = {NULL};
 	int pos = 0, g;
 	size_t size = 0;
 
