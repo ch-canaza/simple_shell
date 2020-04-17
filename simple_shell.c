@@ -14,11 +14,13 @@ int main(int ac, char *ar[], char *envp[])
 	(void)ar;
 	char *buffer;
 	char *av[] = {NULL};
-	int pos = 0, g = 0;
-	size_t size = 0;
+	int pos, g;
+	size_t size;
+
+	size = 0;
+	buffer = malloc(1024 * sizeof(char));
 
 	do {
-		buffer = NULL;
 		pos = 0;
 		if (isatty(STDIN_FILENO))
 			write(STDOUT_FILENO, "#cisfun$ ", 10);
