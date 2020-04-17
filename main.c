@@ -1,4 +1,4 @@
-#include "header.h"#include "header.h"
+#include "header.h"
 /**
  *main - get commands to execute
  *@ac: number of arguments unused
