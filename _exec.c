@@ -10,7 +10,9 @@ int _exec(int  ac, char *av[])
 {
 	int pid, status;
 	unsigned int i;
+	struct stat sb;
 	(void) ac;
+
 	i = 0;
 	status = 0;
 	pid = 0;
