@@ -33,7 +33,7 @@ int main(int ac, char *ar[], char *envp[])
 		if (_strcmp(buffer, "exit\n") == 0)
 		{
 			free(buffer);
-			exit(0);
+			exit(127);
 		}
 		_split(buffer, av);
 		if ((*buffer != '\n') && av[0])
