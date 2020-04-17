@@ -9,7 +9,7 @@
 int main(int ac, char *ar[], char *envp[])
 {
 	char *buffer = NULL;
-	char  *av[] = {NULL};
+	char  *av[10];
 	int pos = 0, g;
 	size_t size = 0;
 

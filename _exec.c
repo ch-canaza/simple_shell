@@ -8,31 +8,27 @@
  */
 int _exec(int  ac, char *av[])
 {
-	int pid, status;
-	unsigned int i;
+	int pid = 0, status = 0;
+	unsigned int i = 0;
 	struct stat sb;
 	(void) ac;
 
-	i = 0;
-	status = 0;
-	pid = 0;
 	if (av[0])
 	{
 		if (stat(av[i], &sb) == -1)
 		{
-			perror("stat");
-				return (127);
+			write(STDOUT_FILENO,"./hsh:  not found\n", 20);
+		       	return (127);
 		}
 		else
 		{
 			pid = fork();
-
 			if (pid == 0)
 			{
 				if (execve(av[0], av, NULL) == -1)
 				{
 					perror("./shell");
-					exit(2);
+					exit(127);
 				}
 			}
 			else
