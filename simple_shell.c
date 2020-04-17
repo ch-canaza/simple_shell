@@ -1,4 +1,4 @@
-#include "header.h"
+#include "header.h"#include "header.h"
 /**
  *main - get commands to execute
  *@ac: number of arguments unused
@@ -6,22 +6,17 @@
  *@envp: environment
  *Return: nothing
  */
-
 int main(int ac, char *ar[], char *envp[])
 {
+	char *buffer = NULL, *av[10];
+	int pos = 0, g;
+	size_t size = 0;
+
 	(void)envp;
 	(void)ac;
 	(void)ar;
-	char *buffer;
-	char *av[] = {NULL};
-	int pos, g;
-	size_t size;
-
-	size = 0;
-	buffer = malloc(1024 * sizeof(char));
 
 	do {
-		pos = 0;
 		if (isatty(STDIN_FILENO))
 			write(STDOUT_FILENO, "#cisfun$ ", 10);
 		g = getline(&buffer, &size, stdin);
