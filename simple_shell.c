@@ -12,15 +12,16 @@ int main(int ac, char *ar[], char *envp[])
 	(void)envp;
 	(void)ac;
 	(void)ar;
-	char *buffer = NULL;
+	char *buffer;
 	char *av[] = {NULL};
 	int pos = 0, g = 0;
 	size_t size = 0;
 
 	do {
+		buffer = NULL;
 		pos = 0;
 		if (isatty(STDIN_FILENO))
-			write(STDOUT_FILENO,"#cisfun$ ",10);
+			write(STDOUT_FILENO, "#cisfun$ ", 10);
 		g = getline(&buffer, &size, stdin);
 		if (!buffer)
 			free(buffer);

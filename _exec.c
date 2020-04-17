@@ -9,11 +9,12 @@
 int _exec(int  ac, char *av[])
 {
 	(void) ac;
-	int pid = 0;
+	int pid;
 	int status = 0;
 	unsigned int i = 0;
 	struct stat sb;
 
+	pid = 0;
 	if (av[0])
 	{
 		if (stat(av[i], &sb) == -1)
