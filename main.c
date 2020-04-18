@@ -12,7 +12,6 @@ int main(int ac, char *ar[], char *envp[])
 	char  *av[10];
 	int pos = 0, g;
 	size_t size = 0;
-	(void)envp;
 	(void)ac;
 	(void)ar;
 
@@ -41,7 +40,6 @@ int main(int ac, char *ar[], char *envp[])
 			_exec(pos, av);
 		while (pos < 10)
 			pos++;
-
 	} while (1);
 	free(buffer);
 	free(av);
