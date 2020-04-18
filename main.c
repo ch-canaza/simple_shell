@@ -6,7 +6,7 @@
  *@envp: environment
  *Return: nothing
  */
-int main(int ac, char *ar[], char *envp[])
+int main(int ac, char *ar[], char **envp)
 {
 	char *buffer = NULL;
 	char  *av[10];
@@ -31,9 +31,9 @@ int main(int ac, char *ar[], char *envp[])
 		if (_strcmp(buffer, "exit\n") == 0)
 		{
 			free(buffer);
-			exit(0);
+			exit(2);
 		}
-		if (_strcmp(buffer, "env\n") == 0)
+		else if (_strcmp(buffer, "env\n") == 0)
 			print_e(envp);
 		_split(buffer, av);
 		if ((*buffer != '\n') && av[0])
