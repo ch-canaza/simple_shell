@@ -29,10 +29,10 @@ int main(int ac, char *ar[], char *envp[])
 			free(buffer);
 			exit(0);
 		}
-		if (_strcmp(buffer, "exit\n") == 0)
+		if ((_strcmp(buffer, "exit\n") == 0) && (buffer != NULL))
 		{
 			free(buffer);
-			exit(0);
+			exit(*buffer);
 		}
 		if (_strcmp(buffer, "env\n") == 0)
 			print_e(envp);
