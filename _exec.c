@@ -15,7 +15,7 @@ int _exec(int  ac, char *av[])
 
 	if (av[0])
 	{
-		if (stat(av[i], &sb) == -1)
+		if ((stat(av[i], &sb) == -1) && (_strcmp(av[i], "env\n") != 0))
 		{
 			write(STDOUT_FILENO, "./hsh:  not found\n", 20);
 			return (127);
@@ -27,8 +27,11 @@ int _exec(int  ac, char *av[])
 			{
 				if (execve(av[0], av, NULL) == -1)
 				{
-					perror("./shell");
-					exit(127);
+					if (_strcmp(av[i], "env\n") != 0)
+					{
+						perror("./shell");
+						exit(127);
+					}
 				}
 			}
 			else
