@@ -14,4 +14,6 @@ void _split(char *buffer, char **av);
 int _exec(int  ac, char *av[]);
 int _strcmp(char *s1, char *s2);
 int main(int ac, char **ar, char *envp[]);
+int print_e(char **arg);
+int _strlen(char *s);
 #endif
