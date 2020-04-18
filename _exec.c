@@ -17,8 +17,8 @@ int _exec(int  ac, char *av[])
 	{
 		if (stat(av[i], &sb) == -1)
 		{
-			write(STDOUT_FILENO,"./hsh:  not found\n", 20);
-		       	return (127);
+			write(STDOUT_FILENO, "./hsh:  not found\n", 20);
+			return (127);
 		}
 		else
 		{
