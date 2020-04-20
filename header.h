@@ -10,6 +10,7 @@
 #include <sys/types.h>
 #include <signal.h>
 #include <stdarg.h>
+void _signal(int line);
 void _split(char *buffer, char **av);
 int _exec(int  ac, char *av[]);
 int _strcmp(char *s1, char *s2);

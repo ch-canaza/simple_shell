@@ -1,0 +1,11 @@
+#include "header.h"
+/**
+ * c_handler - handle the ctrl + c
+ * @next: non used argument
+ * Return: void
+ */
+void c_handler (int next)
+{
+	(void) next;
+	_printf("\n#cisfun$ ");
+}

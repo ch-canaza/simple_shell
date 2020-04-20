@@ -7,7 +7,7 @@
 .TH SIMPLE_SHELL
 
 .Sh NAME
-SIMPLE_SHELL \ - execute commands in linux
+SIMPLE_SHELL \ - interprets and executes commands between the user and the operating system (LINUX)
 
 .Sh SYNOPSIS
 
